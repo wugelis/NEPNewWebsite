@@ -1,0 +1,275 @@
+﻿.borderBottomLine{
+    border-bottom:1px solid;
+}     
+
+/*主版頁面上li的字體字型大小調整*/
+  li{
+      font-family:DFKai-sb;
+      font-size:14pt;
+      font-weight:bold;
+  }
+
+  /*主版頁面上a的字體調整*/
+  a{
+      font-weight: bold;
+  }
+
+  /*主版頁面上li底下的a的字體顏色調整*/
+  li>a{
+            color:black;      
+            
+        }
+
+
+  .ViewHeight{
+      height:768px;
+      max-width:1024px;
+      margin-left:auto;
+      margin-right:auto;
+  }
+
+  .containerWidth{
+       max-width:1024px;
+      margin-left:auto;
+      margin-right:auto;
+
+  }
+
+
+  /*Index區塊左上td的排版設定*/
+  .uplefttd{
+      width:575px;
+      height:202px;
+      padding:5px;
+  }
+   /*Index區塊右上td的排版設定*/
+    .uprighttd{
+       width:449px;
+      height:202px;
+      padding:5px;
+    
+  }
+
+       /*Index區塊左下td的排版設定*/
+    .downlefttd{
+           width:341px;
+      height:284px;
+      padding:5px;
+    }
+       /*Index區塊下中td的排版設定*/
+    .downmidtd{
+          width:341px;
+      height:284px;
+       padding:5px;
+    }
+       /*Index區塊右下td的排版設定*/
+    .downrighttd{
+        width:341px;
+      height:284px;
+      padding:5px;
+    }
+   
+
+    /*Index的table每個區塊包上div並設定邊框*/
+   .blockborder{
+       /*border:solid 1px;*/
+   }
+
+    /*Index區塊左下div的背景設定*/
+.downlefttddiv {
+    background-image: url('../Photo/PDLT.jpg');
+    background-size:contain;
+    width:329px;
+    height:268.69px;
+}
+ /*Index區塊下中div的背景設定*/
+.downmidtddiv {
+    background-image: url('../Photo/PDMT.jpg');
+    background-size:contain;
+    width:329px;
+    height:268.69px;
+}
+
+  /*Index區塊右下div的背景設定*/
+.downrighttddiv {
+    background-image: url('../Photo/PDRT.jpg');
+    background-size:contain;
+    width:329px;
+    height:268.69px;
+}
+
+
+/*===========================框框排版由此處開始設定============================*/
+/*Index左下區塊中的table設定*/
+.DLT01 {
+    width:329px;
+    height:33px;
+}
+.DLT02 {
+    width:329px;
+    height:33px;
+}
+.DLT03 {
+    width:329px;
+    height:33px;
+}
+.DLT04 {
+    width:329px;
+    height:26px;
+}
+.DLT05 {
+    width:329px;
+    height:30px;
+}
+.DLT06 {
+    width:329px;
+    height:33px;
+}
+.DLT07 {
+    width:329px;
+    height:33px;
+}
+/*========================================================*/
+/*Index下中區塊中的table設定*/
+.DMT01{
+    width:329px;
+    height:70px;
+}
+.DMT02{
+    width:329px;
+    height:26px;
+}
+.DMT03{
+    width:329px;
+    height:17px;
+}
+.DMT04{
+    width:329px;
+    height:26px;
+}
+.DMT05{
+    width:329px;
+    height:17px;
+}
+.DMT06{
+    width:329px;
+    height:26px;
+}
+.DMT07{
+    width:329px;
+    height:26px;
+}
+
+/*========================================================*/
+/*Index右下區塊中的table設定*/
+.DRT01{
+     width:329px;
+     height:70px;
+}
+.DRT02{
+     width:329px;
+     height:26px;
+}
+.DRT03{
+     width:329px;
+     height:17px;
+}
+.DRT04{
+     width:329px;
+     height:26px;
+}
+.DRT05{
+     width:329px;
+     height:17px;
+}
+.DRT06{
+     width:329px;
+     height:26px;
+}
+.DRT07{
+     width:329px;
+     height:26px;
+}
+/*========================================================*/
+/*後台用的CSS，設定圖片的寬度*/
+.erNetAdmin{
+    width:1140px;
+}
+
+.zeroHeight{
+    height:0;border:0;margin:0;padding:0;
+}
+
+.sysMessage{
+    font-size:large;
+}
+
+/*========================================================*/
+/*疑難排解跟下載專區用的CSS區塊*/
+.tbcss>tbody>tr>td>span>a{
+      color:blue;
+	text-decoration:underline;
+	
+}
+.tbcss>tbody>tr>td
+{
+    border:2px solid white;
+   
+}
+
+.style14 {	color: #000000;
+	font-size: 24px;
+}
+.style15 {color:#003300;font-size: 24px}
+
+.style19 {	color: #003300;
+	font-size: 16px;
+	font-weight: bold;
+}
+/*========================================================*/
+.navbar-nav>li>a{
+    line-height: 30px;
+}
+/*========================================================*/
+/*後台下載專區跟疑難排解Table用CSS*/
+/*刪除lable字樣顏色*/
+.DeleteText{
+    color: red;
+}
+/*Table格式跟邊框的CSS*/
+.TableStyle{
+    border:1px dotted black;
+    width:100%;
+    margin:5px 0px
+   
+}
+/*上傳檔案Lable字樣區塊*/
+.TableStyleUp01{
+    width:170px;
+    height:50px;
+   padding-top:0px;
+  
+}
+/*上傳檔案inpute區塊*/
+.TableStyleUp02{
+    padding-top:0px;
+    padding-bottom:30px;
+     height:50px;
+ 
+}
+/*刪除檔案Lable區塊*/
+.TableStyleDel01{
+     width:170px;
+    height:40px;
+     padding-top:0px;
+      padding-bottom:9px;
+    
+}
+/*刪除檔案填入字樣區塊*/
+.TableStyleDel02{
+     padding-top:0px;
+     padding-bottom:0px;
+      height:40px;
+}
+/*========================================================*/
+/*.vertical .carousel-inner { height: 100%; } .carousel.vertical .item { -webkit-transition: 0.6s ease-in-out top; -moz-transition: 0.6s ease-in-out top; -ms-transition: 0.6s ease-in-out top; -o-transition: 0.6s ease-in-out top; transition: 0.6s ease-in-out top; } .carousel.vertical .active { top: 0; } .carousel.vertical .next { top: 100%; } .carousel.vertical .prev { top: -100%; } .carousel.vertical .next.left, .carousel.vertical .prev.right { top: 0; } .carousel.vertical .active.left { top: -100%; } .carousel.vertical .active.right { top: 100%; } .carousel.vertical .item { left: 0; }​*/ 

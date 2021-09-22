@@ -1,0 +1,27 @@
+﻿@using YuanNewWebsite.Helpers.HtmlHelpers
+@{
+    ViewBag.Title = "Download";
+    string folderName = Model;
+}
+
+
+<html>
+<head>
+
+</head>
+
+<body bgcolor="#E7EDDC" lang=ZH-TW vlink=blue>
+    <div class="bgstyle">
+        <table class="tbcss" width="1024" border="0" align="center">
+            <tr>
+                <td height="20" colspan="2"><span class="style14"> </span></td>
+            </tr>
+            <tr>
+                <td height="54" colspan="2"><img src="~/images/left_5_T.jpg" alt="下載專區圖示" width="1024" height="94"></td>
+            </tr>
+            @Html.GetDownloads(folderName)
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+﻿@model YuanNewWebsite.VO.DownloadUploadVO
+
+@{
+    ViewBag.Title = "DownloadUpload";
+
+    string Message = Model != null ? Model.Message : string.Empty;
+    HtmlString htmlString = new HtmlString(Message);
+}
+
+<h2>檔案下載專區檔案上傳更新</h2>
+
+@{ 
+    Html.RenderPartial("Menu");
+}
+
+@using (Html.BeginForm("DownloadUpload", "ErNetAdmin",FormMethod.Post,new { enctype = "multipart/form-data",id= "frm" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4 class="text-info">檔案下載專區檔案上傳更新</h4>
+        <h4 class="text-danger">注意：(上傳／刪除) 一次擇一操作。</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @*<table class="TableStyle">
+            <tr>            
+                <td class="TableStyleUp01">@Html.LabelFor(model => model.File1, htmlAttributes: new { @class = "control-label" })</td>
+                <td class="TableStyleUp02">
+                    <div class="zeroHeight">
+                        <div style="position:relative;">
+
+                            <a class="btn btn-primary" href='javascript:;'>
+                                Choose File...
+                                <input type="file" id="file1" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="files" size="40" onchange='$("#upload-file-info1").html($(this).val()); $("#File1").val($(this).val());'>
+                            </a>
+                            &nbsp;
+                            <span class='label label-info' id="upload-file-info1"></span>
+
+                        </div>
+                        @Html.EditorFor(model => model.File1, new { htmlAttributes = new { style = "height:0;border:0;margin:0;padding:0;" } })
+                        @Html.ValidationMessageFor(model => model.File1, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+               
+            </tr>       
+            <tr>
+                <td class="TableStyleDel01"><label class="control-label DeleteText">刪除系統權限申請</label></td>
+                <td class="TableStyleDel02"><input class="form-control" name="Text1" type="text" placeholder="請輸入要刪除的檔案名稱"  onblur='$("#Text1").val($(this).val());'/></td>
+            
+</tr>
+        </table>*@
+        <table class="TableStyle">
+            <tr>
+                <td class="TableStyleUp01">@Html.LabelFor(model => model.File2, htmlAttributes: new { @class = "control-label" })</td>
+                <td class="TableStyleUp02">
+                    <div class="zeroHeight">
+                        <div style="position:relative;">
+                            <a class="btn btn-primary" href='javascript:;'>
+                                Choose File...
+                                <input type="file" id="file2" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="files" size="40" onchange='$("#upload-file-info2").html($(this).val()); $("#File2").val($(this).val());'>
+                            </a>
+                            &nbsp;
+                            <span class='label label-info' id="upload-file-info2"></span>
+                        </div>
+                        @Html.EditorFor(model => model.File2, new { htmlAttributes = new { style = "height:0;border:0;margin:0;padding:0;" } })
+                        @Html.ValidationMessageFor(model => model.File2, "", new { @class = "text-danger" })
+                    </div>
+                </td>              
+            </tr>
+            <tr>
+                <td class="TableStyleDel01"><label class="control-label DeleteText">刪除系統操作手冊</label></td>
+                <td class="TableStyleDel02"><input class="form-control" name="Text2" type="text"  placeholder="請輸入要刪除的檔案名稱"  onblur='$("#Text2").val($(this).val());'/></td>             
+            </tr>
+        </table>
+        <table class="TableStyle">
+            <tr>
+                <td class="TableStyleUp01">@Html.LabelFor(model => model.File3, htmlAttributes: new { @class = "control-label" })</td>
+                <td class="TableStyleUp02">
+                    <div class="zeroHeight">
+                        <div style="position:relative;">
+                            <a class="btn btn-primary" href='javascript:;'>
+                                Choose File...
+                                <input type="file" id="file3" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="files" size="40" onchange='$("#upload-file-info3").html($(this).val()); $("#File3").val($(this).val());'>
+                            </a>
+                            &nbsp;
+                            <span class='label label-info' id="upload-file-info3"></span>
+                        </div>
+                        @Html.EditorFor(model => model.File3, new { htmlAttributes = new { style = "height:0;border:0;margin:0;padding:0;" } })
+                        @Html.ValidationMessageFor(model => model.File3, "", new { @class = "text-danger" })
+                    </div>
+                </td>              
+            </tr>
+            <tr>
+                <td class="TableStyleDel01"><label class="control-label DeleteText">刪除生煤網路申報</label></td>
+                <td class="TableStyleDel02"><input class="form-control" name="Text3" type="text" placeholder="請輸入要刪除的檔案名稱" onblur='$("#Text3").val($(this).val());' /></td>             
+            </tr>
+        </table>
+        <table class="TableStyle">
+            <tr>
+                <td class="TableStyleUp01">@Html.LabelFor(model => model.File4, htmlAttributes: new { @class = "control-label" })</td>
+                <td class="TableStyleUp02">
+                    <div class="zeroHeight">
+                        <div style="position:relative;">
+                            <a class="btn btn-primary" href='javascript:;'>
+                                Choose File...
+                                <input type="file" id="file4" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="files" size="40" onchange='$("#upload-file-info4").html($(this).val()); $("#File4").val($(this).val());'>
+                            </a>
+                            &nbsp;
+                            <span class='label label-info' id="upload-file-info4"></span>
+                        </div>
+                        @Html.EditorFor(model => model.File4, new { htmlAttributes = new { style = "height:0;border:0;margin:0;padding:0;" } })
+                        @Html.ValidationMessageFor(model => model.File4, "", new { @class = "text-danger" })
+                    </div>
+                </td>              
+            </tr>
+            <tr>
+                <td class="TableStyleDel01"><label class="control-label DeleteText">刪除會議宣導資料</label></td>
+                <td class="TableStyleDel02"><input class="form-control" name="Text4" type="text" placeholder="請輸入要刪除的檔案名稱" onblur='$("#Text4").val($(this).val());'/></td>             
+            </tr>
+        </table>
+        <span id="Message" class="text-danger sysMessage">@htmlString</span>
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="上傳檔案" class="btn btn-default" onclick="sumitevent(1)" />
+                &nbsp;
+                <input type="submit" value="確認刪除" class="btn btn-danger" onclick="sumitevent(2)" />
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="btnType"/>
+}
+
+@if (!string.IsNullOrEmpty(Message))
+{
+    @Html.ActionLink("回首頁", "Index", "ErNetAdmin");
+}

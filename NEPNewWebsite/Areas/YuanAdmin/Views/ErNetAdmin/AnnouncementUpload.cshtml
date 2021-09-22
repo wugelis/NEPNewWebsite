@@ -1,0 +1,75 @@
+﻿@model YuanNewWebsite.VO.AnnouncementUploadVO
+
+@{
+    ViewBag.Title = "AnnouncementUpload";
+
+    string Message = Model != null ? Model.Message : string.Empty;
+}
+
+<h2>公告檔案上傳更新</h2>
+
+@{
+    Html.RenderPartial("Menu");
+}
+
+@using (Html.BeginForm("AnnouncementUpload", "ErNetAdmin", FormMethod.Post, new { enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>公告檔案上傳更新</h4>
+        <p class="text-warning">注意：</p>
+        <p class="text-warning">最新公告檔案檔案名稱為『ernet-new.htm』<br />
+        歷史公告檔案名稱為『ernet-main.htm』</p>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ErNetMainFile, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 zeroHeight">
+                <div style="position:relative;">
+                    <a class='btn btn-primary' href='javascript:;'>
+                        Choose File...
+                        <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="files" size="40" onchange='$("#upload-file-info1").html($(this).val()); $("#ErNetMainFile").val($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info1"></span>
+                </div>
+                @Html.EditorFor(model => model.ErNetMainFile, new { htmlAttributes = new { style = "height:0;border:0;margin:0;padding:0;" } })
+                @Html.ValidationMessageFor(model => model.ErNetMainFile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ErNetNewFile, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 zeroHeight">
+                <div style="position:relative;">
+                    <a class='btn btn-primary' href='javascript:;'>
+                        Choose File...
+                        <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="files" size="40" onchange='$("#upload-file-info2").html($(this).val()); $("#ErNetNewFile").val($(this).val());'>
+                    </a>
+                    &nbsp;
+                    <span class='label label-info' id="upload-file-info2"></span>
+                </div>
+                @Html.EditorFor(model => model.ErNetNewFile, new { htmlAttributes = new { style = "height:0;border:0;margin:0;padding:0;" } })
+                @Html.ValidationMessageFor(model => model.ErNetNewFile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <span id="Message" class="text-danger sysMessage">@Message</span>
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="上傳檔案" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(Message))
+{
+    <div>
+        @Html.ActionLink("回首頁", "Index", "ErNetAdmin")
+    </div>
+}

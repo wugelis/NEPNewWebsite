@@ -1,0 +1,22 @@
+﻿<div class="navbar-collapse collapse borderBottomLine">
+    <ul class="nav navbar-nav">
+        <li class="dropdown op">
+            <a href="@Url.Action("ChangePassword","ErNetAdmin")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("修改密碼功能", "ChangePassword", "ErNetAdmin")</li>
+                <li>@Html.ActionLink("回管理首頁", "Index", "ErNetAdmin")</li>
+                <li>@Html.ActionLink("登出", "Logout", "ErNetAdmin")</li>
+            </ul>
+        </li>
+        <li class="dropdown op">
+            <a href="@Url.Action("AnnouncementUpload","ErNetAdmin")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">檔案上傳<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("公告檔案上傳更新", "AnnouncementUpload", "ErNetAdmin")</li>
+                <li>@Html.ActionLink("下載專區檔案更新", "DownloadUpload", "ErNetAdmin")</li>
+                <li>@Html.ActionLink("操作疑難排解檔案上傳更新", "GuideUpload", "ErNetAdmin")</li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+

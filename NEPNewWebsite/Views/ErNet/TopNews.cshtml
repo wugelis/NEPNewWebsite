@@ -1,0 +1,252 @@
+﻿@using YuanNewWebsite.Helpers.HtmlHelpers
+
+@{
+    Layout = null;
+
+    int top = Model;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TopNews</title>
+
+    <style>
+
+        /* Font Definitions */
+
+
+        /* Style Definitions */
+
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            mso-style-parent: "";
+            margin: 0cm;
+            margin-bottom: .0001pt;
+            mso-pagination: widow-orphan;
+            font-size: 12.0pt;
+            font-family: 新細明體;
+            mso-bidi-font-family: 新細明體;
+        }
+
+        a:link, span.MsoHyperlink {
+            color: blue;
+            text-decoration: underline;
+            text-underline: single;
+        }
+
+        a:visited, span.MsoHyperlinkFollowed {
+            color: blue;
+            text-decoration: underline;
+            text-underline: single;
+        }
+
+        p {
+            mso-margin-top-alt: auto;
+            margin-right: 0cm;
+            mso-margin-bottom-alt: auto;
+            margin-left: 0cm;
+            mso-pagination: widow-orphan;
+            font-size: 12.0pt;
+            font-family: 新細明體;
+            mso-bidi-font-family: 新細明體;
+        }
+
+            p.style5, li.style5, div.style5 {
+                mso-style-name: style5;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 13.5pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                font-weight: bold;
+            }
+
+            p.style10, li.style10, div.style10 {
+                mso-style-name: style10;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: #CC0000;
+                font-weight: bold;
+            }
+
+            p.style12, li.style12, div.style12 {
+                mso-style-name: style12;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: #CC0000;
+                font-weight: bold;
+            }
+
+            p.style13, li.style13, div.style13 {
+                mso-style-name: style13;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: #000099;
+                font-weight: bold;
+            }
+
+            p.style15, li.style15, div.style15 {
+                mso-style-name: style15;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: black;
+                font-weight: bold;
+            }
+
+            p.style16, li.style16, div.style16 {
+                mso-style-name: style16;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: black;
+            }
+
+            p.style22, li.style22, div.style22 {
+                mso-style-name: style22;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 13.5pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: black;
+                font-weight: bold;
+            }
+
+            p.style10style16, li.style10style16, div.style10style16 {
+                mso-style-name: "style10 style16";
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+            }
+
+            p.style1, li.style1, div.style1 {
+                mso-style-name: style1;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: #000066;
+            }
+
+            p.style2, li.style2, div.style2 {
+                mso-style-name: style2;
+                mso-margin-top-alt: auto;
+                margin-right: 0cm;
+                mso-margin-bottom-alt: auto;
+                margin-left: 0cm;
+                mso-pagination: widow-orphan;
+                font-size: 12.0pt;
+                font-family: 新細明體;
+                mso-bidi-font-family: 新細明體;
+                color: black;
+            }
+
+        span.style221 {
+            mso-style-name: style221;
+            mso-ansi-font-size: 13.5pt;
+            mso-bidi-font-size: 13.5pt;
+            color: black;
+            font-weight: bold;
+        }
+
+        span.style51 {
+            mso-style-name: style51;
+            mso-ansi-font-size: 13.5pt;
+            mso-bidi-font-size: 13.5pt;
+            font-weight: bold;
+        }
+
+        span.style121 {
+            mso-style-name: style121;
+            mso-ansi-font-size: 12.0pt;
+            mso-bidi-font-size: 12.0pt;
+            color: #CC0000;
+            font-weight: bold;
+        }
+
+        span.style131 {
+            mso-style-name: style131;
+            color: #000099;
+            font-weight: bold;
+        }
+
+        span.style151 {
+            mso-style-name: style151;
+            mso-ansi-font-size: 12.0pt;
+            mso-bidi-font-size: 12.0pt;
+            color: black;
+            font-weight: bold;
+        }
+
+        span.msonormal0 {
+            mso-style-name: msonormal;
+        }
+
+        span.style11 {
+            mso-style-name: style11;
+            color: #000066;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        body {
+            background-image: url(/images/ernet_M.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        @Html.GetTopAnnouncements(top)
+
+    </div>
+</body>
+</html>

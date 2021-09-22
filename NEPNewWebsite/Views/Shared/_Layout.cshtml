@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    <link href="~/Content/ErNet.Main.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="text-center">
+        <img class="img-resposive" src="~/images/ernet_T.jpg" alt="固定污染源管理資訊系統" />
+    </div>
+    <div class="navbar">
+        <div class="containerWidth">
+            <div class="navbar-collapse borderBottomLine">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown op">
+                        <a href="http://ivy5.epa.gov.tw/epalaw/index.aspx" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">法規與解釋函查詢<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            @*<li><a href="http://ivy5.epa.gov.tw/epalaw/index.aspx" target="_blank">相關法規</a></li>*@
+                            <li><a href="http://a0-oaout.epa.gov.tw/law/LawCategoryContentList.aspx?id=05" target="_blank">相關法規</a></li>
+                            <li><a href="http://ernet.epa.gov.tw/airpj2/query_faq_new.asp" target="_blank">解釋函查詢</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown op">
+                        <a href="http://www.epa.gov.tw/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">相關網站連結<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.epa.gov.tw/" target="_blank">行政院環境保護署</a></li>
+                            <li><a href="http://www.epa.gov.tw/np.asp?ctNode=32964&mp=epa" target="_blank">環保網站</a></li>
+                            <li><a href="http://forum.epa.gov.tw/EPASPS/" target="_blank">意見信箱</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown op">
+                        <a href="@Url.Action("Index","ErNet")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更新與管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Index","ErNet")">首頁</a></li>
+                            <li><a href="@Url.Action("Login","ErNetAdmin",new { area = "YuanAdmin" })" target="_blank">系統登入</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a target="_blank" href="http://www.handicap-free.nat.gov.tw/Applications/Detail?category=20151015150819">
+                            <img src="~/images/aplus.jpg" alt="通過A+等級無障礙網頁檢測, 另開視窗." title="通過A+等級無障礙網頁檢測, 另開視窗." />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body-content  ViewHeight">
+        @RenderBody()
+
+        <footer>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
